@@ -1,0 +1,41 @@
+<div class="navbar-fixed">
+  <mz-navbar class="header-divider">
+    <a href="#" id="btn-sidenav-demo" data-target="mobile-demo" class="sidenav-trigger waves-effect waves-light">
+      <img src="assets/icons/svg/hamburger.svg" class="icon-hamburger">
+    </a>
+    <a href="#" class="brand-logo center">
+      <img src="assets/icons/svg/logo.svg">
+    </a>
+    <mz-navbar-item-container [align]="'right'">
+      <mz-navbar-item>
+        <a class="language-btn waves-effect waves-light" id="myDIV" (click)="myFunction()">हिंदी</a>
+      </mz-navbar-item>
+  
+    </mz-navbar-item-container>
+  </mz-navbar>
+</div>
+
+
+<mz-sidenav [id]="'sidenav-demo'" #sidenav [collapseButtonId]="'btn-sidenav-demo'">
+  <mz-sidenav-header>
+      <a href="#" data-target="mobile-demo" class="close-trigger waves-effect waves-Apple " (click)="sidenav.opened = !sidenav.opened">
+        <img src="assets/icons/svg/close.svg" >
+      </a>
+      <div  class="user-view">
+        <div class="profile-img">
+          <img  class="circle avatar" src="https://sherweb.github.io/ngx-materialize/assets/sidenav-demo-avatar.png">
+        </div>
+        <div class="profile-text">
+          <div  class="name">Nikesh Arora</div>
+          <div  class="email">+91 98840 54321</div>
+        </div>  
+      </div>
+  </mz-sidenav-header>
+  <mz-sidenav-link class=""><li ><a class=" waves-effect waves-Apple "><object type="image/svg+xml" data="assets/icons/svg/claim-request.svg" class="icon-menu myploicy">My Policies</object>My Policies</a></li></mz-sidenav-link>
+  <mz-sidenav-link class=""><li ><a class=" waves-effect waves-Apple "><object type="image/svg+xml" data="assets/icons/svg/nominee.svg" class="icon-menu add-nominee">Add/ Update Nominee</object>Add/ Update Nominee</a></li></mz-sidenav-link>
+  <mz-sidenav-link class=""><li ><a class=" waves-effect waves-Apple "><object type="image/svg+xml" data="assets/icons/svg/notify.svg" class="icon-menu notify">Notifications</object>Notifications <mz-badge [value]="4" [badgeClass]="'notify-red'"></mz-badge></a></li></mz-sidenav-link>
+  <mz-sidenav-link class=""><li ><a class=" waves-effect waves-Apple "><object type="image/svg+xml" data="assets/icons/svg/claim.svg" class="icon-menu claim">Request / Track Claims</object>Request / Track Claims</a></li></mz-sidenav-link>
+  <mz-sidenav-link class=""><li ><a class=" waves-effect waves-Apple "><object type="image/svg+xml" data="assets/icons/svg/face.svg" class="icon-menu support">Support</object>Support</a></li></mz-sidenav-link>
+  <a class="logout-btn waves-effect waves-Apple " (click)="logOut()">Logout</a>
+
+</mz-sidenav>

@@ -1,0 +1,79 @@
+<ng-container *ngIf="!screenFlag">
+<nav class="header-divider">
+  <div class="nav-wrapper">
+    <a href="#" class="sidenav-trigger waves-effect waves-light">
+      <!-- <i class="fas fa-arrow-left"></i> -->
+    </a>
+    <a href="#" class="brand-logo center">
+      <img src="assets/icons/svg/logo.svg">
+    </a>
+  </div>
+</nav>
+<div class="page-content">
+  <div class="inner-wrapper otp-wrapper">
+      <h5>We know it's you, but still ...</h5>
+      <div class="phone-details">
+        <p>Enter your registered mobile  </p>
+
+        <div class="row">
+          <div class="input-field">
+            <input id="mobile"   type="text" name="mobile3" [(ngModel)]="mobile_number"  class="validate defaultnumber" placeholder="Mobile "><span class="float-text">+91</span>
+            <span style="color: #fb1f1f;font-size: 15px;" *ngIf="errorNumberFlag">Please check  Mobile Number you enterd</span>
+          </div>
+        </div>
+      </div>
+  
+  </div>
+
+  <div class="button-end">
+    <button (click)="userOTPlogin(mobile_number)"  class="full-button waves-effect">Continue</button>
+  </div>
+</div>
+
+
+
+</ng-container>
+<!-- otp -->
+
+<ng-container *ngIf="screenFlag">
+<nav class="header-divider">
+  <div class="nav-wrapper">
+    <a href="#" class="sidenav-trigger waves-effect waves-light" (click)="backBtn()">
+      <img src="assets/icons/svg/back.svg">
+    </a>
+    <a href="#" class="brand-logo center">
+      <img src="assets/icons/svg/logo.svg">
+    </a>
+  </div>
+</nav>
+<div class="page-content">
+  <div class="inner-wrapper otp-wrapper center">
+    <h5>We know it's you, but still ...</h5>
+    <div class="phone-details">
+      <p>Enter OTP sent to your registered mobile and email address.</p>
+      <p>{{dispOtp}}</p>
+
+     
+      <div id="divOuter">
+        <div id="divInner">
+          <input id="partitioned" type="number" maxlength="4" [(ngModel)]="otpText"  (keyup)="onKey($event)">
+            <span style="color: red;display: block" *ngIf="errorFlag">Wrong OTP</span>
+        </div>
+      </div>
+
+
+    </div>
+    <div class="row center help-float">
+      <a class="btn-flat waves-effect otp-send">RESEND OTP</a>
+      <a class="btn-flat help-button waves-effect waves-light">
+        <object type="image/svg+xml" data="assets/icons/svg/otp-help.svg" class="icon-help">Help</object>
+      </a>
+    </div>
+  </div>
+  <lottie-animation-view  [options]="lottieConfig" (animCreated)="handleAnimation($event)" [width]="150" [height]="150">
+  </lottie-animation-view>
+</div>
+</ng-container>
+
+
+

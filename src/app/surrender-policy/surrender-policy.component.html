@@ -1,0 +1,52 @@
+<div class="navbar-fixed">
+<nav class="header-divider">
+  <div class="nav-wrapper">
+    <a href="#" class="sidenav-trigger waves-effect waves-Apple " routerLink="/home">
+      <img src="assets/icons/svg/back.svg">
+    </a>
+    <span href="#" class="toolbar-text center">
+       Surrender/ Cancel Policy
+    </span>
+  </div>
+</nav>
+</div>
+
+<section class="policy-details Surrender-body">
+  <div class="container-mob">
+    <div class="drag-boundary" [ngClass]="{ 'top-b': !edge?.top, 'bottom-b': !edge?.bottom, 'left-b': !edge?.left, 'right-b': !edge?.right }" #myBounds>
+    <div class="hidden-text-layer">
+      <h3>We will miss you,Nikesh!</h3>
+      <p>It feels sad to see someone go. We hope to see you again soon. If there's anything we could have done to help you serve
+        better, please do feel free to get in touch with us.</p>
+    </div>
+    <div class="hide-move-div">
+      <h5 >Surrender/ Cancel Policy</h5>
+      <mz-card class="blue-card swipe-card" [horizontal]="true" [hoverable]="false" ngDraggable (edge)="checkEdge($event)" [bounds]="myBounds" [inBounds]="inBounds">
+        <mz-card-content>
+          <h4>Nikesh Arora</h4>
+          <h6>+91 98XXX XXX21 | nikxxxx@gmail.com</h6>
+          <div class="Apple -policy-number">
+            <h5>Apple Life Group Insurance Policy</h5>
+            <h4 style="letter-spacing: 2px;font-weight: 600">M01GC9DGJE88850</h4>
+            <h6>Insured for Rs.75 Thousand till 06 Apr 2020</h6>
+          </div>
+        </mz-card-content>
+      </mz-card>
+    </div>
+
+    <div class="hide-when-slide">
+      <div class="user-text-para">
+        <p>Nikesh, your policy is within the Free Cancellation period. Just drag your policy card below this line to process your
+          cancellation request.</p>
+      </div>
+      <div class="down-linee">
+        <object type="image/svg+xml" data="assets/icons/svg/down-swipe.svg" class="down-icon">down</object>
+      </div>
+    </div>
+    <div class="remove-line"><div class="ripple"></div></div>
+  </div>
+  </div>
+  <div class="animation-circle-ripples"></div>
+
+
+  </section>

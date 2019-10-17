@@ -1,0 +1,9 @@
+/*body.otp .route-container {
+    position:relative;min-height: 100vh;
+}*/
+.route-container {
+    position:relative;/*min-height: 85vh;*/
+}
+.route-container>* {
+    display:block;
+}

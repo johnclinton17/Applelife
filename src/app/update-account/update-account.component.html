@@ -1,0 +1,59 @@
+<div class="navbar-fixed">
+<nav class="header-divider">
+  <div class="nav-wrapper">
+    <a href="#" class="sidenav-trigger waves-effect waves-Apple " routerLink="/home">
+      <img src="assets/icons/svg/back.svg">
+    </a>
+    <span href="#" class="toolbar-text center">
+       Update Account info
+    </span>
+  </div>
+</nav>
+</div>
+
+<section class="update-account">
+  <div class="grey-overlay-floating"></div>
+  <div class="container-mob">
+      <div class="blue-top-card">
+        <mz-card class="blue-card" [horizontal]="true" [hoverable]="false">
+          <mz-card-content>
+            <h4>Nikesh Arora</h4>
+              <h5>Apple Life Group Insurance Policy</h5>
+              <h4 class="policy-number">M01GC9DGJE88850</h4>
+          </mz-card-content>
+        </mz-card>
+      </div>
+      <div class="bottom-card-menu">
+        <div class="wrapper">
+            <h6>Nikesh, what would you like to update in your account?</h6>
+            <div class="button-section">
+              <a class="waves-effect waves-Apple " (click)="neviagteToProfile('name')">Name
+                <object type="image/svg+xml" data="assets/icons/svg/forward.svg" class="menu-arrow">Update Account </object>
+              </a>
+              <div class="divider"></div>
+              <a class="waves-effect waves-Apple " (click)="neviagteToProfile('mobile')">Mobile Number 
+                <object type="image/svg+xml" data="assets/icons/svg/forward.svg" class="menu-arrow">Update Account </object>
+              </a>
+              <div class="divider"></div>
+              <a class="waves-effect waves-Apple " (click)="neviagteToProfile('email')">Email Address 
+                <object type="image/svg+xml" data="assets/icons/svg/forward.svg" class="menu-arrow">Update Account </object>
+              </a>
+              <div class="divider"></div>
+              <a class="waves-effect waves-Apple " (click)="neviagteToProfile('address')">Communication Address <span>*</span> 
+                <object type="image/svg+xml" data="assets/icons/svg/forward.svg" class="menu-arrow">Update Account </object>
+              </a>
+              <div class="divider"></div>
+              <a class="waves-effect waves-Apple " (click)="neviagteToProfile('bankaccount')">Bank Account 
+                <object type="image/svg+xml" data="assets/icons/svg/forward.svg" class="menu-arrow">Update Account </object>
+              </a>
+              <div class="divider"></div>
+              <span class="applicable-text"><span>*</span> Not applicable for Group Policies</span>
+            </div>
+        </div>
+      </div>
+      <div class="faq-update" >
+        <a  class="faq-link">Frequently Asked Questions</a>
+      </div>  
+
+  </div>
+</section>

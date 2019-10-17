@@ -1,0 +1,10 @@
+
+<a routerLink="/addnominee" *ngIf="nomineeFlag == 'false'"><img src="assets/icons/nominee-screens/Update Nominee Pg1.png" class="mobile-view" usemap="#Map2"></a>
+<a  *ngIf="nomineeFlag == 'true'"><img src="assets/icons/nominee-screens/Update Nominee pg3.png" class="mobile-view" usemap="#Map1"></a>
+
+<map name="Map2" id="Map2">
+    <area shape="rect" coords="-10,0,57,50" routerLink="/home" alt="back" />
+</map>
+<map name="Map1" id="Map1">
+  <area shape="rect" coords="-10,0,57,50"  routerLink="/home" alt="back" />
+</map>

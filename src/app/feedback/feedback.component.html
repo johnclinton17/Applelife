@@ -1,0 +1,46 @@
+<div class="navbar-fixed">
+<nav class="header-divider">
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo center">
+      <img src="assets/icons/svg/logo.svg">
+    </a>
+  </div>
+</nav>
+</div>
+<section class="feedback-body">
+  <div class="container-mob">
+    <div class="content-block center">
+      <h4>That was easy!</h4>
+      <p>Your request is sent successfully.</p>
+      <p>Reference No.: 23456789</p>
+    </div>
+    <div class="feedback-form">
+      <div class="wrapper">
+        <h4>Tell us more about your experience</h4>
+        <div class="emoji-row row">
+          <button id="sad" class="emo-button col s4" (click)="switchSad()">
+            <object type="image/svg+xml" data="assets/icons/svg/Emoticon_Not Great.svg" class="emoji-icon" >sad</object>
+            <span>Not Great!</span>
+          </button>
+          <button class="emo-button col s4" id="okay" (click)="switchOkay()">
+            <object type="image/svg+xml" data="assets/icons/svg/Emoticon_Okay.svg" class="emoji-icon1" >sad</object>
+          <span>Okay!</span></button>
+          <button class="emo-button col s4" id="love" (click)="switchLove()">
+            <object type="image/svg+xml" data="assets/icons/svg/Emoticon_Love it.svg" class="emoji-icon2">sad</object>
+          <span>Love it!</span></button>
+        </div>
+        <div class="textarea-row"><textarea placeholder="Help us improve. Leave us a note."></textarea></div>
+        <div class="button-row"><button class="feedback-button waves-effect waves-Apple " (click)="submitFeedback()">Submit</button></div>
+      </div>
+      <div class="wrapper2" style="opacity: 0;">
+        <h4 class="feedback">Thank you for your feedback</h4>
+        <div class="emoji-row row">
+          <lottie-animation-view [options]="lottieConfig" (animCreated)="handleAnimation($event)" [width]="150" [height]="150">
+          </lottie-animation-view>
+        </div>
+      
+      </div>
+    </div>
+    <!-- <button class="draw">Draw</button> -->
+  </div>
+</section>

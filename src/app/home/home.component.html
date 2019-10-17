@@ -1,0 +1,89 @@
+<app-header></app-header>
+
+  <section class="policy-details">
+    <div class="container-mob">
+      <h5>My Policies</h5>
+    </div>
+    <ngx-slick-carousel class="carousel" 
+                        #slickModal="slick-carousel" 
+                        [config]="slideConfig" >
+        <div ngxSlickItem *ngFor="let slide of slides" class="slide" >
+              <!-- <img src="{{ slide.img }}" alt="" width="100%"> -->
+            <div>  
+                <mz-card class="blue-card" [horizontal]="true" [hoverable]="false">
+                    <mz-card-content>
+                      <!-- <h4>{{userDetails.firstName}}    {{userDetails.lastName}}</h4> -->
+                       <h4>Nikesh Arora</h4>
+
+                      <!-- <h6>+91 {{mobileNo}}  <span style="opacity: .6">|</span>  {{emailId}} </h6> -->
+                        <h6>+91 98XXX XXX21  <span style="opacity: .6">|</span>   nikxxxx@gmail.com</h6>
+                      <div class="Apple -policy-number">
+                        <h5>{{slide.product.name}}</h5>
+                        <h4 style="letter-spacing: 2px;font-weight: 600">{{slide.policyNumber}}</h4>
+                        <h6>Sum Assured: Rs.{{slide.sumAssured}}</h6>
+                      </div>
+                      <div class="policy-date">
+                        <h6 class="opacity-60">Policy End Date</h6>
+                        <h5>{{slide.expiryDate | date: 'd MMM  y '}}</h5>
+                      </div>
+                      <div class="policy-actions">
+                       <div class="rightside">
+                          <button class="card-button waves-effect waves-Apple " href="#"><span>View Policy</span></button>
+                          <button type="button" mat-fab fab-toggle class="waves-effect waves-light fab-round">
+                            <i class="fas fa-share-alt"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </mz-card-content>
+                  </mz-card>
+            </div>
+        </div>
+    </ngx-slick-carousel>
+  
+    <div class="container-mob">
+      <div class="menu-box">
+        <div class="split-row">
+          <button class="menu-button width-50-pad pad-right-10 waves-effect waves-Apple  icon-menu-box" routerLink="/updateAccountInfo"> 
+            <div class="menu-icon"><object type="image/svg+xml" data="assets/icons/svg/user-edit.svg" class="icon-box update-icon">Update Account </object></div>
+            <div class="menu-link">Update Account Info</div>
+          </button>
+          <button class="menu-button width-50-pad pad-left-10 waves-effect waves-Apple  icon-menu-box" routerLink="/nominee" (click)='clearstorage()'>
+            <div class="menu-icon"><object type="image/svg+xml" data="assets/icons/svg/nominee.svg" class="icon-box nominee-icon">Add / Update Nominee </object></div>
+            <div class="menu-link">Add / Update Nominee</div>
+          </button>
+          <button class="menu-button width-50-pad pad-right-10 waves-effect waves-Apple  icon-menu-box" routerLink="/surrenderPolicy">
+            <div class="menu-icon"><object type="image/svg+xml" data="assets/icons/svg/surrender.svg" class="icon-box policy-icon">Surrender / Cancel Policy </object></div>
+            <div class="menu-link">Surrender / Cancel Policy</div>
+          </button>
+          <button class="menu-button width-50-pad pad-left-10 waves-effect waves-Apple  icon-menu-box">
+            <div class="menu-icon"><object type="image/svg+xml" data="assets/icons/svg/claim-request.svg" class="icon-box track-icon">Request / Track Claims </object></div>
+            <div class="menu-link">Request / Track Claims</div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="policy-footer">
+    <div class="container-mob">
+      <div class="policy-footer-wrapper">
+        <div class="footer-buttons">
+          <button class="menu-button pad-right-10 waves-effect waves-Apple  icon-footer-box">
+            <div class="menu-icon">
+              <object type="image/svg+xml" data="assets/icons/svg/play.svg" class="icon-box watch-icon">Watch Policy Benefits </object>
+            </div>
+            <div class="menu-link">Watch Policy Benefits</div>
+          </button>
+          <button class="menu-button pad-left-10 waves-effect waves-Apple  icon-footer-box">
+            <div class="menu-icon">
+              <object type="image/svg+xml" data="assets/icons/svg/download.svg" class="icon-box download-icon">Download Brochure</object>
+            </div>
+            <div class="menu-link">Download Brochure</div>
+          </button>
+        </div>
+        <div class="questions-row">
+          <h4>Have Questions?</h4>
+          <a  class="faq-link">View frequently asked questions</a>
+        </div>
+      </div>
+    </div>
+  </section>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="413.999" height="215" viewBox="0 0 413.999 215">
+<defs><style>.a{fill:url(#a);}</style>
+<linearGradient id="a" x1="1" y1="0.427" x2="0" y2="0.443" gradientUnits="objectBoundingBox">
+<stop offset="0" stop-color="#007EC4"/><stop offset="1" stop-color="#013297"/></linearGradient>
+</defs>
+
+
+<path class="a" d="M-5682-6950h-414v-215h60v76.642h12V-7165h8v60.968h12V-7165h8v69.218h12V-7165h8.474v42.815h12V-7165h8.157v63.442h12V-7165h8.157v53.541h12V-7165h8.157v60.968h12V-7165h8.159v42.815h12V-7165h8.157v65.091h12V-7165h8.157v56.84h12V-7165h8.159v76.642h12V-7165h8.159v63.442h12V-7165h8.474v53.541h12V-7165h8v42.815h12V-7165h8v76.642h12V-7165H-5682v215Z" transform="translate(6096 7164.999)"/></svg>

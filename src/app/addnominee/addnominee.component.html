@@ -1,0 +1,14 @@
+
+<img src="assets/icons/nominee-screens/2nd_Nominee_Info.png" class="mobile-view" usemap="#Map">
+<map name="Map" id="Map">
+  <area shape="rect" coords="312,735,347,772" (click)="bottomSheetModal.openModal()"  />
+  <area shape="rect" coords="28,1141,348,1193" (click)="addnominee()" routerLink="/nominee" />
+</map>
+
+<mz-modal #bottomSheetModal [fullscreen]="true" [fixedFooter]="false" [bottomSheet]="false">
+  <mz-modal-content>
+    <img src="assets/icons/nominee-screens/Percentage Allocation.png" class="mobile-view">
+  </mz-modal-content>
+
+</mz-modal>
+

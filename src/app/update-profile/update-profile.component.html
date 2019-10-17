@@ -1,0 +1,211 @@
+<div class="navbar-fixed">
+<nav class="header-divider">
+  <div class="nav-wrapper">
+    <a href="#" class="sidenav-trigger waves-effect waves-Apple " routerLink="/updateAccountInfo">
+      <img src="assets/icons/svg/back.svg">
+    </a>
+    <span href="#" class="toolbar-text center">
+      Update Account info
+    </span>
+  </div>
+</nav>
+</div>
+
+<section class="update-menu-body" *ngIf="pagetype == 'name'">
+  <div class="wrapper">
+    <div class="container-mob">
+      <h4>Update Name</h4>
+      <div class="current-row">
+        <span class="current-label">CURRENT NAME</span>
+        <span class="current-value">Nikesh Arora</span>
+      </div>
+      <div class="new-row">
+        <span class="new-label">NEW NAME</span>
+        <span class="new-value">
+          <div class="validate-icon">
+            <input id="name" type="text" name="name3" [(ngModel)]="clientName" class="validate" placeholder=""  >
+          <!--   <lottie-animation-view class="input-valid" [options]="lottieConfig" (animCreated)="handleAnimation($event)" [width]="25" [height]="25"></lottie-animation-view> -->
+          </div>
+          <span style="color: #fb1f1f;font-size: 15px;" *ngIf="errorNumberFlag">Please check Name</span>
+        </span>
+      </div>
+      <div class="apply-all">
+          <mz-checkbox-container>
+            <input mz-checkbox [label]="'Apply this update to all policies'" id="checkbox-id" type="checkbox">
+          </mz-checkbox-container>
+      </div>
+    </div>
+    <div class="button-end">
+      <button  class="full-button waves-effect" routerLink="/feedback">Update Name</button>
+    </div>
+  </div>
+</section>
+<section class="update-menu-body" *ngIf="pagetype == 'mobile'">
+  <div class="wrapper">
+    <div class="container-mob">
+      <h4>Update Mobile Number</h4>
+      <div class="current-row">
+        <span class="current-label">CURRENT NUMBER</span>
+        <span class="current-value">9884054321</span>
+      </div>
+      <div class="new-row">
+        <span class="new-label">NEW 10 DIGIT NUMBER</span>
+        <span class="new-value">
+          <div class="validate-icon">
+            <input id="mobile" type="text" name="mobile3" [(ngModel)]="mobile_no" class="validate" placeholder=""  (keyup)="textMobile($event)" maxlength="10">
+            <lottie-animation-view class="input-valid" [options]="lottieConfig" (animCreated)="handleAnimation($event)" [width]="25" [height]="25"></lottie-animation-view>
+          </div>
+          <span style="color: #fb1f1f;font-size: 15px;" *ngIf="errorNumberFlag">Please check Mobile Number/Email you enterd</span>
+        </span>
+      </div>
+      <div class="apply-all">
+          <mz-checkbox-container>
+            <input mz-checkbox [label]="'Apply this update to all policies'" id="checkbox-id" type="checkbox">
+          </mz-checkbox-container>
+      </div>
+    </div>
+    <div class="button-end" (click)="updateMobile()">
+      <button  class="full-button waves-effect">Update Mobile Number</button>
+    </div>
+  </div>
+</section>
+<section class="update-menu-body" *ngIf="pagetype == 'email'">
+  <div class="wrapper">
+    <div class="container-mob">
+      <h4>Update Email Address</h4>
+      <div class="current-row">
+        <span class="current-label">CURRENT EMAIL</span>
+        <span class="current-value">nikesharora@gmail.com</span>
+      </div>
+      <div class="new-row">
+        <span class="new-label">nikesharora@gmail.com</span>
+        <span class="new-value">
+          <div class="validate-icon">
+            <input id="name" type="text" name="name3" class="validate" placeholder="">
+            <lottie-animation-view class="input-valid" [options]="lottieConfig" (animCreated)="handleAnimation($event)" [width]="25"
+              [height]="25"></lottie-animation-view>
+          </div>
+          <span style="color: #fb1f1f;font-size: 15px;" *ngIf="errorNumberFlag">Please check Name</span>
+        </span>
+      </div>
+      <div class="apply-all">
+        <mz-checkbox-container>
+          <input mz-checkbox [label]="'Apply this update to all policies'" id="checkbox-id" type="checkbox">
+        </mz-checkbox-container>
+      </div>
+    </div>
+    <div class="button-end">
+      <button class="full-button waves-effect">Update Email</button>
+    </div>
+  </div>
+</section>
+<section class="update-menu-body address-body" *ngIf="pagetype == 'address'">
+  <div class="wrapper">
+    <div class="container-mob">
+      <h4>Update Communication Address</h4>
+      <div class="current-row">
+        <span class="current-label">OLD ADDRESS</span>
+        <span class="current-value">B - 130, Phase 1, Block B,<br> Vivek Vihar, New Delhi,<br> Delhi 110092</span>
+      </div>
+      <div class="new-address-line">ENTER NEW ADDRESS</div>
+      <div class="new-row">
+        <span class="new-label">ADDRESS 1</span>
+        <span class="new-value">
+          <div class="validate-icon">
+            <input id="address1" type="text" name="address1" class="validate" placeholder="">
+          </div>
+          <span style="color: #fb1f1f;font-size: 15px;" *ngIf="errorNumberFlag">Please check the Address</span>
+        </span>
+      </div>
+      <div class="new-row">
+        <span class="new-label">ADDRESS 2</span>
+        <span class="new-value">
+          <div class="validate-icon">
+            <input id="address2" type="text" name="address2" class="validate" placeholder="">
+          </div>
+          <span style="color: #fb1f1f;font-size: 15px;" *ngIf="errorNumberFlag">Please check the Address</span>
+        </span>
+      </div>
+      <div class="new-row">
+        <span class="new-label">CITY</span>
+        <span class="new-value">
+          <div class="validate-icon">
+            <input id="city" type="text" name="city" class="validate" placeholder="">
+          </div>
+          <span style="color: #fb1f1f;font-size: 15px;" *ngIf="errorNumberFlag">Please check the city</span>
+        </span>
+      </div>
+      <div class="new-row">
+        <span class="new-label">STATE</span>
+        <span class="new-value">
+          <div class="validate-icon">
+            <input id="state" type="text" name="state" class="validate" placeholder="">
+          </div>
+          <span style="color: #fb1f1f;font-size: 15px;" *ngIf="errorNumberFlag">Please check the state</span>
+        </span>
+      </div>
+      <div class="new-row">
+        <span class="new-label">POSTAL CODE</span>
+        <span class="new-value">
+          <div class="validate-icon">
+            <input id="state" type="text" name="state" class="validate" placeholder="">
+          </div>
+          <span style="color: #fb1f1f;font-size: 15px;" *ngIf="errorNumberFlag">Please check the postal code</span>
+        </span>
+      </div>
+      <div class="upload-row">
+        <button class="waves-effect waves-light upload-transparent">Upload Address Proof</button>
+      </div>
+      <div class="apply-all">
+        <mz-checkbox-container>
+          <input mz-checkbox [label]="'Apply this update to all policies'" id="checkbox-id" type="checkbox">
+        </mz-checkbox-container>
+      </div>
+    </div>
+    <div class="button-end">
+      <button class="full-button waves-effect">Update Communication Address</button>
+    </div>
+  </div>
+</section>
+<section class="update-menu-body bankaccount-body" *ngIf="pagetype == 'bankaccount'">
+  <div class="wrapper">
+    <div class="container-mob">
+      <h4>Update Bank Account Details</h4>
+      <div class="new-row">
+        <span class="new-label">ACCOUNT NUMBER</span>
+        <span class="new-value">
+          <div class="validate-icon">
+            <input id="accountnumber" type="text" name="accountnumber" class="validate" placeholder="">
+          </div>
+          <span style="color: #fb1f1f;font-size: 15px;" *ngIf="errorNumberFlag">Please Account Number</span>
+        </span>
+      </div>
+      <div class="new-row">
+        <span class="new-label">IFSC CODE</span>
+        <span class="new-value">
+          <div class="validate-icon">
+            <input id="ifsc" type="text" name="ifsc" class="validate" placeholder="">
+          </div>
+          <span style="color: #fb1f1f;font-size: 15px;" *ngIf="errorNumberFlag">Please IFSC Code</span>
+        </span>
+      </div>
+      <div class="new-row">
+        <span class="new-label">ACCOUNT HOLDER NAME</span>
+        <span class="new-value">
+          <div class="validate-icon">
+            <input id="accountname" type="text" name="name4" class="validate" placeholder="">
+          </div>
+          <span style="color: #fb1f1f;font-size: 15px;" *ngIf="errorNumberFlag">Please holder name</span>
+        </span>
+      </div>
+      <div class="apply-all">
+        <mz-checkbox-container>
+          <input mz-checkbox [label]="'Apply this update to all policies'" id="checkbox-id" type="checkbox">
+        </mz-checkbox-container>
+      </div>
+    </div>
+    <div class="button-end">
+      <button class="full-button waves-effect">Update Bank Ac Details</button>
+    </div>
+  </div>
+</section>
