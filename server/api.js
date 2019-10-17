@@ -4,14 +4,6 @@ var app = express();
 var jwt = require('jsonwebtoken');
 //create router for API Call
 var router = express.Router();
-// SMS Gateway 
-var twilio = require('twilio');
-var accountSid = 'ACbe497cebeb74ba70712e72f5c87c74c9'; // Your Account SID from www.twilio.com/console
-var authToken = '1fd86c29d5102048c0170856541927d0';   // Your Auth Token from www.twilio.com/console
-
-//twillio initialization start  here
-var client = new twilio(accountSid, authToken);
-app.set("superSecret", "AgeonInsetfront@niyatiapp");
 
 //function for generating OTP
 function generateOTP() {
